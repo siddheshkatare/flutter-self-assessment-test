@@ -218,91 +218,111 @@ class _SelfAssesmentsPageState extends State<SelfAssesmentsPage> {
                                         CrossAxisAlignment.center,
                                     children: [
                                       /// Handle NoDataFound
-                                      if (state.state !=
-                                              SelfAssesmentsBlocStateEnum
-                                                  .loading &&
-                                          (state.topPicks.topPicks ?? [])
-                                              .isEmpty)
-                                        const NoDataFoundWidget(),
+                                      (state.state !=
+                                                  SelfAssesmentsBlocStateEnum
+                                                      .loading &&
+                                              (state.topPicks.topPicks ?? [])
+                                                  .isEmpty)
+                                          ? const NoDataFoundWidget()
+                                          :
 
-                                      /// Handle Loading
-                                      if (state.state ==
-                                          SelfAssesmentsBlocStateEnum.loading)
-                                        ShimmerWidget(
-                                          height: 150,
-                                          borderRadius:
-                                              BorderRadius.circular(15),
-                                        ),
-
-                                      /// Top Picks Carousel
-                                      if ((state.topPicks.topPicks ?? [])
-                                          .isNotEmpty)
-                                        CarouselSlider(
-                                          items: (state.topPicks.topPicks ?? [])
-                                              .map(
-                                                (TopPicksItemModel item) =>
-                                                    SelfAssesmentsTopPicksItemWidget(
-                                                  topPicksItemModel: item,
-                                                ),
-                                              )
-                                              .toList(),
-                                          carouselController:
-                                              carouselController,
-                                          options: CarouselOptions(
-                                            viewportFraction: 1.0,
-                                            height: 150,
-                                            autoPlay: true,
-                                            disableCenter: true,
-                                            onPageChanged: (int index,
-                                                CarouselPageChangedReason
-                                                    reason) {
-                                              _currentIndex.value = index;
-                                            },
-                                          ),
-                                        ),
-
-                                      /// Top Picks Carousel Indicator
-                                      if ((state.topPicks.topPicks ?? [])
-                                          .isNotEmpty)
-                                        Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.center,
-                                          children: (state.topPicks.topPicks ??
-                                                  [])
-                                              .asMap()
-                                              .entries
-                                              .map(
-                                                (MapEntry<int,
-                                                            TopPicksItemModel>
-                                                        entry) =>
-                                                    Padding(
-                                                  padding:
-                                                      const EdgeInsets.all(4.0),
-                                                  child: AnimatedContainer(
-                                                    height: 10,
-                                                    width: value == entry.key
-                                                        ? 40
-                                                        : 10,
-                                                    decoration: BoxDecoration(
-                                                      color: value == entry.key
-                                                          ? ColorConstants
-                                                              .primaryColor
-                                                          : ColorConstants
-                                                              .primaryColor
-                                                              .withOpacity(0.2),
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                        10,
+                                          /// Handle Loading
+                                          state.state ==
+                                                  SelfAssesmentsBlocStateEnum
+                                                      .loading
+                                              ? ShimmerWidget(
+                                                  height: 150,
+                                                  borderRadius:
+                                                      BorderRadius.circular(15),
+                                                )
+                                              : Column(
+                                                  children: [
+                                                    /// Top Picks Carousel
+                                                    CarouselSlider(
+                                                      items: (state.topPicks
+                                                                  .topPicks ??
+                                                              [])
+                                                          .map(
+                                                            (TopPicksItemModel
+                                                                    item) =>
+                                                                SelfAssesmentsTopPicksItemWidget(
+                                                              topPicksItemModel:
+                                                                  item,
+                                                            ),
+                                                          )
+                                                          .toList(),
+                                                      carouselController:
+                                                          carouselController,
+                                                      options: CarouselOptions(
+                                                        viewportFraction: 1.0,
+                                                        height: 150,
+                                                        autoPlay: true,
+                                                        disableCenter: true,
+                                                        onPageChanged: (int
+                                                                index,
+                                                            CarouselPageChangedReason
+                                                                reason) {
+                                                          _currentIndex.value =
+                                                              index;
+                                                        },
                                                       ),
                                                     ),
-                                                    duration: const Duration(
-                                                      milliseconds: 500,
+
+                                                    /// Top Picks Carousel Indicator
+                                                    Row(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .center,
+                                                      children: (state.topPicks
+                                                                  .topPicks ??
+                                                              [])
+                                                          .asMap()
+                                                          .entries
+                                                          .map(
+                                                            (MapEntry<int,
+                                                                        TopPicksItemModel>
+                                                                    entry) =>
+                                                                Padding(
+                                                              padding:
+                                                                  const EdgeInsets
+                                                                      .all(4.0),
+                                                              child:
+                                                                  AnimatedContainer(
+                                                                height: 10,
+                                                                width: value ==
+                                                                        entry
+                                                                            .key
+                                                                    ? 40
+                                                                    : 10,
+                                                                decoration:
+                                                                    BoxDecoration(
+                                                                  color: value ==
+                                                                          entry
+                                                                              .key
+                                                                      ? ColorConstants
+                                                                          .primaryColor
+                                                                      : ColorConstants
+                                                                          .primaryColor
+                                                                          .withOpacity(
+                                                                              0.2),
+                                                                  borderRadius:
+                                                                      BorderRadius
+                                                                          .circular(
+                                                                    10,
+                                                                  ),
+                                                                ),
+                                                                duration:
+                                                                    const Duration(
+                                                                  milliseconds:
+                                                                      500,
+                                                                ),
+                                                              ),
+                                                            ),
+                                                          )
+                                                          .toList(),
                                                     ),
-                                                  ),
+                                                  ],
                                                 ),
-                                              )
-                                              .toList(),
-                                        ),
                                     ],
                                   ),
                                 );
