@@ -1,0 +1,32 @@
+{
+    "topPicks": [
+        {
+            "id": 1,
+            "name": "Personality Test",
+            "description": "Discover your unique characteristics & understand yourself better.",
+            "image": "https://scontent.fisk1-1.fna.fbcdn.net/v/t39.30808-6/300378810_971922040321366_6359719590464930914_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=j4KDCfTrAm4Q7kNvgGP96mn&_nc_zt=23&_nc_ht=scontent.fisk1-1.fna&_nc_gid=Apaj5mhF8tM_LV-O0YlWtGA&oh=00_AYAt9Yh_qRI61btRBRM734eVeO63g3rqPtlLKn5QW4qMNQ&oe=673E3F94",
+            "duration": "8 Min"
+        },
+        {
+            "id": 2,
+            "name": "Social Anxiety Test",
+            "description": "Discover your unique characteristics & understand yourself better.",
+            "image": "https://picsum.photos/500/500?random=randomId",
+            "duration": "16 Min"
+        },
+        {
+            "id": 3,
+            "name": "Emotional Intelligence Test",
+            "description": "Discover your unique characteristics & understand yourself better.",
+            "image": "https://picsum.photos/500/500?random=randomId",
+            "duration": "8 Min"
+        },
+        {
+            "id": 4,
+            "name": "Psychopathy Test",
+            "description": "Discover your unique characteristics & understand yourself better.",
+            "image": "https://picsum.photos/500/500?random=randomId",
+            "duration": "8 Min"
+        }
+    ]
+}

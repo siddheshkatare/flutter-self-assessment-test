@@ -1,0 +1,44 @@
+{
+    "recentlyTaken": [
+        {
+            "id": 1,
+            "name": "Self-Discovery Assessment",
+            "description": "Discover your unique characteristics & understand yourself better.",
+            "image": "https://picsum.photos/500/500?random=randomId",
+            "duration": "8 Min",
+            "result": "65"
+        },
+        {
+            "id": 2,
+            "name": "Social Anxiety Test",
+            "description": "Discover your unique characteristics & understand yourself better.",
+            "image": "https://picsum.photos/500/500?random=randomId",
+            "duration": "16 Min",
+            "result": "75"
+        },
+        {
+            "id": 3,
+            "name": "Psycopathy Test",
+            "description": "Discover your unique characteristics & understand yourself better.",
+            "image": "https://picsum.photos/500/500?random=randomId",
+            "duration": "16 Min",
+            "result": "75"
+        },
+        {
+            "id": 4,
+            "name": "Postpartum Depression Quiz",
+            "description": "Discover your unique characteristics & understand yourself better.",
+            "image": "https://picsum.photos/500/500?random=randomId",
+            "duration": "8 Min",
+            "result": "65"
+        },
+        {
+            "id": 5,
+            "name": "Social Media Test",
+            "description": "Discover your unique characteristics & understand yourself better.",
+            "image": "https://picsum.photos/500/500?random=randomId",
+            "duration": "8 Min",
+            "result": "65"
+        }
+    ]
+}
