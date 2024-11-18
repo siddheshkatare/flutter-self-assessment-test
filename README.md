@@ -1,3 +1,3 @@
-# flutter_application_1
+# Flutter - Self Assessment Test
 
-A new Flutter project.
+Flutter project with clean archicture and clean UI design.
